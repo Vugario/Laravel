@@ -13,6 +13,7 @@ jobs:
     working_directory: ~/laravel
     steps:
       - checkout
+      - run: sudo docker-php-ext-install pdo_mysql
       - run: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
       - run: composer self-update
       - restore_cache:
