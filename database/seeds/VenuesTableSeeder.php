@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Base\Component\Venue\Model\Venue;
 
-class DatabaseSeeder extends Seeder
+class VenuesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +12,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(UsersTableSeeder::class);
-        $this->call(VenuesTableSeeder::class);
+        factory(Venue::class, 50)->create();
     }
 }

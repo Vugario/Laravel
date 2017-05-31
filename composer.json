@@ -19,7 +19,10 @@
             "database"
         ],
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Base\\Component\\": "src/component/src",
+            "Base\\Framework\\": "src/framework/src",
+            "Base\\Support\\": "src/support/src"
         }
     },
     "autoload-dev": {

@@ -169,14 +169,16 @@ return [
         Laravel\Tinker\TinkerServiceProvider::class,
 
         /*
-         * Application Service Providers...
+         * Framework Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Base\Framework\Foundation\AppServiceProvider::class,
+        Base\Framework\Routing\RouteServiceProvider::class,
 
+        /*
+         * Component Service Providers...
+         */
+        Base\Component\User\UserServiceProvider::class,
+        Base\Component\Venue\VenueServiceProvider::class,
     ],
 
     /*

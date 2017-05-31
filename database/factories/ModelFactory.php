@@ -12,7 +12,7 @@
 */
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(Base\Component\User\Model\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
@@ -20,5 +20,17 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'email' => $faker->unique()->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
+    ];
+});
+
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(Base\Component\Venue\Model\Venue::class, function (Faker\Generator $faker) {
+    return [
+        'name'        => $faker->name,
+        'description' => $faker->sentence,
+        'address1'    => $faker->streetName,
+        'number'      => $faker->numberBetween(0, 99),
+        'zipcode'     => $faker->numberBetween(11111, 99999),
+        'city'        => $faker->city,
     ];
 });
