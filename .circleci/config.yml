@@ -10,7 +10,7 @@ jobs:
           - "MYSQL_USER=homestead"
           - "MYSQL_PASSWORD=secret"
           - "MYSQL_ROOT_PASSWORD=secret"
-    working_directory: /var/www
+    working_directory: ~/app
     steps:
       - checkout
       - run: composer self-update
@@ -24,5 +24,4 @@ jobs:
           paths:
             - vendor
       - run: php artisan migrate
-      - run: ./vendor/bin/codecept build
-      - run: ./vendor/bin/codecept run
+      - run: ./vendor/bin/phpunit
