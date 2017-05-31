@@ -3,10 +3,17 @@ version: 2
 jobs:
   build:
     docker:
-      - image: notnoopci/php:7.1.5-browsers
+      - image: circleci/php:7.1.5-browsers
+      - image: mysql:5.6
+        environment:
+          - "MYSQL_DATABASE=homestead"
+          - "MYSQL_USER=homestead"
+          - "MYSQL_PASSWORD=secret"
+          - "MYSQL_ROOT_PASSWORD=secret"
     working_directory: ~/laravel
     steps:
       - checkout
+      - run: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
       - run: composer self-update
       - restore_cache:
           keys:
