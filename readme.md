@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/Vugario/Laravel.svg?style=svg)](https://circleci.com/gh/Vugario/Laravel)
+
 # Component-based Laravel
 This is a laravel 5.4.* with a component structure and service layer. It also supports docker and circleci.
 
