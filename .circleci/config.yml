@@ -3,8 +3,8 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/php:7.1.5-browsers
       - image: mysql:5.6
+      - image: circleci/php:7.1.5-browsers
         environment:
           - "MYSQL_DATABASE=homestead"
           - "MYSQL_USER=homestead"
