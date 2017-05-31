@@ -16,6 +16,7 @@ jobs:
       - run: sudo docker-php-ext-install pdo_mysql
       - run: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
       - run: composer self-update
+      - run: cp .env.example .env
       - restore_cache:
           keys:
             - composer-v1-{{ checksum "composer.json" }}
@@ -25,5 +26,6 @@ jobs:
           key: composer-v1-{{ checksum "composer.json" }}
           paths:
             - vendor
+      - run: php artisan key:generate
       - run: php artisan migrate --force
       - run: ./vendor/bin/phpunit
