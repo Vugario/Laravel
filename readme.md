@@ -14,6 +14,9 @@ The project also supports Docker and CircleCI. [https://circleci.com/gh/Vugario/
 - [ ] Run migrations `docker-compose exec app php artisan migrate --seed`
 - [ ] Visit http://0.0.0.0:8080/
 
+## Architecture
+![Architecture](http://development.d.pr/bqMsI+)
+
 ## Project-based
 The application can be divided in three (or more) projects.
 
