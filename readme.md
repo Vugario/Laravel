@@ -4,7 +4,7 @@
 This is a laravel 5.4.* with a component structure and service layer. This structure provides clear separation of concerns.
 It forces components to interact only through defined interfaces, increasing both reliability and testability.
 
-The project also supports Docker and CircleCI.
+The project also supports Docker and CircleCI. [https://circleci.com/gh/Vugario/Laravel](https://circleci.com/gh/Vugario/Laravel)
 
 ## Setup
 - [ ] Clone the repo `git clone git@github.com:Vugario/Laravel.git`
