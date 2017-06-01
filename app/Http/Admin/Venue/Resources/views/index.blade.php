@@ -9,17 +9,17 @@
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
-                        <th>Email</th>
+                        <th>City</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($users as $user)
+                    @foreach($venues as $venue)
                         <tr>
-                            <td>{{ $user->id }}</td>
-                            <td>{{ $user->name }}</td>
-                            <td>{{ $user->email }}</td>
-                            <td><a href="{{ route('admin.users.show', $user->id) }}">Details</a></td>
+                            <td>{{ $venue->id }}</td>
+                            <td>{{ $venue->name }}</td>
+                            <td>{{ $venue->city }}</td>
+                            <td><a href="{{ route('admin.venues.show', $venue->id) }}">Details</a></td>
                         </tr>
                     @endforeach
                 </tbody>

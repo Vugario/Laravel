@@ -8,6 +8,6 @@ class VenueRouteProvider
 {
     public function register(Router $router)
     {
-        $router->get(VenueController::URI, 'VenueController@index');
+        $router->resource(VenueController::URI, 'VenueController', ['as' => 'api']);
     }
 }

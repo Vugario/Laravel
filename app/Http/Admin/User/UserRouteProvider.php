@@ -8,6 +8,6 @@ class UserRouteProvider
 {
     public function register(Router $router)
     {
-        $router->get(UserController::URI, 'UserController@index');
+        $router->resource(UserController::URI, 'UserController', ['as' => 'admin']);
     }
 }

@@ -21,6 +21,15 @@ class UserController extends AdminController
 
     public function index()
     {
-        return view('index');
+        $users = $this->userService->findAll();
+
+        return view('index', ['users' => $users]);
+    }
+
+    public function show($id)
+    {
+        $user = $this->userService->findOneOrFailById($id);
+
+        return view('show', ['user' => $user]);
     }
 }
