@@ -7,9 +7,11 @@ It forces components to interact only through defined interfaces, increasing bot
 The project also supports Docker and CircleCI. [https://circleci.com/gh/Vugario/Laravel](https://circleci.com/gh/Vugario/Laravel)
 
 ## Setup
-- [ ] Clone the repo `git clone git@github.com:Vugario/Laravel.git`
+- [ ] Clone the repo `git clone git@github.com:Vugario/Laravel.git && cd Laravel`
 - [ ] Run composer install (through docker) `docker run --rm -v $(pwd):/app composer/composer install`
 - [ ] Run docker `docker-compose up -d`
+- [ ] Copy the env `cp .env.example .env`
+- [ ] Run migrations `docker-compose exec app php artisan migrate --seed`
 - [ ] Visit http://0.0.0.0:8080/
 
 ## Project-based
