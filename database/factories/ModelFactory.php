@@ -32,5 +32,7 @@ $factory->define(Base\Component\Venue\Model\Venue::class, function (Faker\Genera
         'number'      => $faker->numberBetween(0, 99),
         'zipcode'     => $faker->numberBetween(11111, 99999),
         'city'        => $faker->city,
+        'latitude'    => $faker->latitude,
+        'longitude'   => $faker->longitude,
     ];
 });
